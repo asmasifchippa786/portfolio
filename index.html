@@ -10,13 +10,16 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
 body, html {
   height: 100%;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 230);
   line-height: 1.8;
+  background-color: black;
 }
 
 /* Create a Parallax Effect */
@@ -29,19 +32,19 @@ body, html {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-  background-image: url('./sFvwc6.jpg');
+  background-image: url('./istockphoto-1297247938-170667a.jpg');
   min-height: 100%;
 }
 
 /* Second image (Portfolio) */
 .bgimg-2 {
-  background-image: url("./sFvwc6.jpg");
+  background-image: url("./istockphoto-1297247938-170667a.jpg");
   min-height: 400px;
 }
 
 /* Third image (Contact) */
 .bgimg-3 {
-  background-image: url("./sFvwc6.jpg");
+  background-image: url("./istockphoto-1297247938-170667a.jpg");
   min-height: 400px;
 }
 
@@ -55,6 +58,83 @@ body, html {
     min-height: 400px;
   }
 }
+.opi {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  background-color: rgb(255, 166, 0);
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.opi:hover .overlay {
+  width: 100%;
+  left: 0;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+.opli {
+  position: relative;
+  width: 100%;
+}
+
+.uiu {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ujhjg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000000;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.opli:hover .ujhjg {
+  width: 100%;
+}
+
+.iokl {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
 </style>
 </head>
 <body>
@@ -62,31 +142,27 @@ body, html {
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+    <a class="w3-bar-item w3-button w3-hover-orange w3-hide-medium w3-hide-large w3-right w3-orange" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a>
     <a href="#home" class="w3-bar-item w3-button">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small" ><i class="fa fa-user"></i> ABOUT</a>
     <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
     <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-      <i class="fa fa-search"></i>
-    </a>
   </div>
 
   <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+  <div id="navDemo" class="w3-bar-block w3-orange w3-hide w3-hide-large w3-hide-medium">
     <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
     <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
     <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
   </div>
 </div>
 
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">JECSO <span class="w3-hide-small">BY</span> M.ANAS ASIF</span>
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity" style="font-size: 80px;">JECSO <span class="w3-hide-small">BY</span> M.ANAS ASIF</span>
   </div>
 </div>
 
@@ -101,7 +177,7 @@ body, html {
   <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
       <p><b><i class="fa fa-user w3-margin-right"></i>Anas asif</b></p><br>
-      <img src="./DSC05925.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+      <img src="./DSC05925.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off w3-center center"  alt="Photo of Me" width="500" height="333">
     </div>
 
     <!-- Hide this text on small devices -->
@@ -112,20 +188,20 @@ body, html {
   </div>
   <p class="w3-large w3-center w3-padding-16">Im really good at:</p>
   <p class="w3-wide"><i class="fa fa-camera"></i>web Designer</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
+  <div >
+    <div class="w3-container w3-padding-small w3-orange w3-center" style="width:85%;color: white;">85%</div>
   </div>
   <p class="w3-wide"><i class="fa fa-laptop"></i>Graphic Designer</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:93%">93%</div>
+  <div>
+    <div class="w3-container w3-padding-small w3-orange w3-center" style="width:93%;color: white;">93%</div>
   </div>
   <p class="w3-wide"><i class="fa fa-photo"></i>Virtual Assistant</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:79.75%">79.75%</div>
+  <div >
+    <div class="w3-container w3-padding-small w3-orange w3-center" style="width:79.75%;color: white;">79.75%</div>
   </div>
 </div>
 
-<div class="w3-row w3-center w3-dark-grey w3-padding-16">
+<div class="w3-row w3-center w3-orange w3-padding-16" style="color: white; ">
   <div class="w3-quarter w3-section">
     <span class="w3-xlarge">0</span><br>
     Partners
@@ -159,37 +235,79 @@ body, html {
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center">
     <div class="w3-col m3">
-      <img src="./Jecso (7).png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Background Remove and Restored the pic">
+      
+      <div class="opi">
+        <img src="./Jecso (1).png"style="width:100%" onclick="onClick(this)"  alt="Background Remove and Restored the pic"class="image w3-hover-opacity">
+        <div class="overlay">
+          <div class="text">Hello World</div>
+        </div>
+      </div>
     </div>
 
     <div class="w3-col m3">
-      <img src="./Jecso (8).png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Background Remove and Restored the pic">
+    
+      <div class="opli">
+        <img src="./Jecso (2).png" alt="Avatar" class="uiu">
+        <div class="ujhjg">
+          <div class="iokl">Hello World</div>
+        </div>
+      </div>
     </div>
 
     <div class="w3-col m3">
-      <img src="./Jecso (1).png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="TIMMERMAN">
+      <div class="opi">
+        <img src="./Jecso (1).png"style="width:100%" onclick="onClick(this)"  alt="Background Remove and Restored the pic"class="image w3-hover-opacity">
+        <div class="overlay">
+          <div class="text">Hello World</div>
+        </div>
+      </div>
     </div>
 
     <div class="w3-col m3">
-      <img src="./Jecso (2).png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="EZZRA">
+      <div class="opli">
+        <img src="./Jecso (2).png" alt="Avatar" class="uiu">
+        <div class="ujhjg">
+          <div class="iokl">Hello World</div>
+        </div>
+      </div>
     </div>
   </div>
 
   <div class="w3-row-padding w3-center w3-section">
     <div class="w3-col m3">
-      <img src="./Jecso (3).png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Jecso">
+      <div class="opi">
+        <img src="./Jecso (3).png"style="width:100%" onclick="onClick(this)"  alt="Background Remove and Restored the pic"class="image w3-hover-opacity">
+        <div class="overlay">
+          <div class="text">Hello World</div>
+        </div>
+      </div>
     </div>
 
     <div class="w3-col m3">
-      <img src="./Jecso (4).png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Black Eagle">
+      <div class="opli">
+        <img src="./Jecso (6).png" alt="Avatar" class="uiu">
+        <div class="ujhjg">
+          <div class="iokl">Hello World</div>
+        </div>
+      </div>
     </div>
 
     <div class="w3-col m3">
-      <img src="./Jecso (5).png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Red Phoenix">
+      <div class="opi">
+        <img src="./Jecso (5).png"style="width:100%" onclick="onClick(this)"  alt="Background Remove and Restored the pic"class="image w3-hover-opacity">
+        <div class="overlay">
+          <div class="text">Hello World</div>
+        </div>
+      </div>
     </div>
 
     <div class="w3-col m3">
-      <img src="./Jecso (6).png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="SEBASTAIN">
+      <div class="opli">
+        <img src="./Jecso (8).png" alt="Avatar" class="uiu">
+        <div class="ujhjg">
+          <div class="iokl">Hello World</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -222,21 +340,21 @@ body, html {
     <div class="w3-col m8 w3-panel">
       <div class="w3-large w3-margin-bottom">
         <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Karachi, Pakistan<br>
-        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +923182755787<br>
-        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: officaljecso8907@mail.com<br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +923111297630<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: asifasma212@gmail.com<br>
       </div>
-      <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
+      <p>Swing by for a cup  , or leave me a note:</p>
       <form action="/action_page.php" target="_blank" method="get">
         <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
           <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            <input class="w3-input  w3-orange w3-hover-amber op09" type="text" placeholder="Name" required name="Name" style="border: none;">
           </div>
           <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            <input class="w3-input  w3-orange w3-hover-amber w3-active-amber op09" type="text" placeholder="Email" required name="Email" style="border: none;">
           </div>
         </div>
-        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-        <button class="w3-button w3-black w3-right w3-section" type="submit">
+        <input class="w3-input w3-orange w3-hover-amber w3-focus-amber op09" type="text" placeholder="Message" required name="Message" style="border: none;">
+        <button class="w3-button w3-orange w3-hover-amber  w3-right w3-section" type="submit">
           <i class="fa fa-paper-plane"></i> SEND MESSAGE
         </button>
       </form>
@@ -245,17 +363,17 @@ body, html {
 </div>
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+<footer class="w3-center w3-orange w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-amber"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   <div class="w3-xlarge w3-section">
-    <a href="https://www.facebook.com/profile.php?id=100081486259548"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-  <a href=""> <i class="fa fa-instagram w3-hover-opacity"></i></a>
-<a href=""> <i class="fa-brands fa-github w3-hover-opacity"></i></a>
-<a href=""><i class="fa fa-pinterest-p w3-hover-opacity"></i></a>
-<a href=""> <i class="fa fa-twitter w3-hover-opacity"></i></a>
-<a href=""><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+    <a href="https://www.facebook.com/profile.php?id=100081486259548" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <a href="https://www.linkedin.com/in/jecso-main-4b905a240/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+  <a href="https://www.instagram.com/jecsomain781/" target="_blank"> <i class="fa fa-instagram w3-hover-opacity"></i></a>
+<a href="https://github.com/asmasifchippa786" target="_blank"> <i class="fa fa-github w3-hover-opacity"></i></a>
+<a href="https://twitter.com/JecsoO" target="_blank"> <i class="fa fa-twitter w3-hover-opacity"></i></a>
+<a href="https://www.linkedin.com/in/asma-asif-589876225/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
   </div>
-  <p>Powered by <a href="" title="Jecso Portfolio" target="_blank" class="w3-hover-text-green">Jecso</a></p>
+  <p>Powered by <a href="" title="Jecso Portfolio" target="_blank" class="w3-hover-text-dark">Jecso</a></p>
 </footer>
  
 <script>
